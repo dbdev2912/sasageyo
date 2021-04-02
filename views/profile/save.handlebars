@@ -1,0 +1,112 @@
+<div class="container">
+    <div class="container profile">
+        <div class="mini-container profile-img">
+            <img class="circle-image" src="{{profile.avatar}}" alt="">
+        </div>
+        <div class="profile-content">
+            <div class="profile-line">
+                <span class="token">{{profile.user_token}}</span>
+                <button class="profile-change" id="to-change" href="/profile/c/infor">Thay đổi trang cá nhân</button>
+                <button class="profile-change margin-none gear">
+                    <svg height="24" viewBox="0 0 48 48" width="24"><path d="M46.7 20.6l-2.1-1.1c-.4-.2-.7-.5-.8-1-.5-1.6-1.1-3.2-1.9-4.7-.2-.4-.3-.8-.1-1.2l.8-2.3c.2-.5 0-1.1-.4-1.5l-2.9-2.9c-.4-.4-1-.5-1.5-.4l-2.3.8c-.4.1-.8.1-1.2-.1-1.4-.8-3-1.5-4.6-1.9-.4-.1-.8-.4-1-.8l-1.1-2.2c-.3-.5-.8-.8-1.3-.8h-4.1c-.6 0-1.1.3-1.3.8l-1.1 2.2c-.2.4-.5.7-1 .8-1.6.5-3.2 1.1-4.6 1.9-.4.2-.8.3-1.2.1l-2.3-.8c-.5-.2-1.1 0-1.5.4L5.9 8.8c-.4.4-.5 1-.4 1.5l.8 2.3c.1.4.1.8-.1 1.2-.8 1.5-1.5 3-1.9 4.7-.1.4-.4.8-.8 1l-2.1 1.1c-.5.3-.8.8-.8 1.3V26c0 .6.3 1.1.8 1.3l2.1 1.1c.4.2.7.5.8 1 .5 1.6 1.1 3.2 1.9 4.7.2.4.3.8.1 1.2l-.8 2.3c-.2.5 0 1.1.4 1.5L8.8 42c.4.4 1 .5 1.5.4l2.3-.8c.4-.1.8-.1 1.2.1 1.4.8 3 1.5 4.6 1.9.4.1.8.4 1 .8l1.1 2.2c.3.5.8.8 1.3.8h4.1c.6 0 1.1-.3 1.3-.8l1.1-2.2c.2-.4.5-.7 1-.8 1.6-.5 3.2-1.1 4.6-1.9.4-.2.8-.3 1.2-.1l2.3.8c.5.2 1.1 0 1.5-.4l2.9-2.9c.4-.4.5-1 .4-1.5l-.8-2.3c-.1-.4-.1-.8.1-1.2.8-1.5 1.5-3 1.9-4.7.1-.4.4-.8.8-1l2.1-1.1c.5-.3.8-.8.8-1.3v-4.1c.4-.5.1-1.1-.4-1.3zM24 41.5c-9.7 0-17.5-7.8-17.5-17.5S14.3 6.5 24 6.5 41.5 14.3 41.5 24 33.7 41.5 24 41.5z" fill-rule="evenodd"></path></svg>
+                </button>
+            </div>
+            <div class="profile-line">
+                <div class="profile-link-container">
+                    <a class="link"><span>{{post_count}}</span> Bài viết</a>
+                </div>
+                <div class="profile-link-container">
+                    <a class="link" href="#"><span>{{followed}}</span> Theo dõi</a>
+                </div>
+                <div class="profile-link-container">
+                    <a class="link" href="#">Đang theo dõi <span>{{following}}</span> người dùng</a>
+                </div>
+            </div>
+            <div class="profile-line">
+                <p class="profile-name">{{profile.name}}</p>
+            </div>
+            <div class="profile-line">
+                <p class="profile-link">{{profile.website}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="large-container profile-options-container">
+        <div class="nav-container profile-options">
+            <nav class="nav">
+                <ul class="list-unstyled nav options">
+                    <li class="option">
+                        <a class="link" href="/profile">Bài viết</a>
+                    </li>
+                    <li class="option">
+                        <a class="link" href="#">SaSaTV</a>
+                    </li>
+                    <li class="option">
+                        <a class="link active" href="/profile/saved">Đã lưu</a>
+                    </li>
+                    <li class="option">
+                        <a class="link" href="#">Được gắn thẻ</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="large-container posts" id="counter" current="">
+            {{#each sample}}
+            <div class="mini-container post">
+                <div class="theme" post_id="{{post_id}}">
+                    <button class="post-btn gear">
+                        <svg class="hidden-icon" fill="#ffffff" height="24" viewBox="0 0 48 48" width="24"><path d="M34.6 3.1c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5s1.1-.2 1.6-.5c1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z"></path></svg>
+                    <span class="hidden-number likes">1</span></button>
+                    <button class="post-btn gear">
+                        <svg class="hidden-icon" viewBox="0 0 512 512" fill="#111111"><path d="m256 21.952c-141.163 0-256 95.424-256 212.715 0 60.267 30.805 117.291 84.885 157.717l-41.109 82.219c-2.176 4.331-1.131 9.579 2.496 12.779 2.005 1.771 4.501 2.667 7.04 2.667 2.069 0 4.139-.597 5.952-1.813l89.963-60.395c33.899 12.949 69.803 19.52 106.773 19.52 141.163 0 256-95.424 256-212.715s-114.837-212.694-256-212.694z"></path></svg>
+                    <span class="hidden-number cmts">0</span></button>
+                </div>
+                <img class="post-pre-img" src="{{url}}" alt="">
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="/css/home/master.css">
+<div class="dark-theme flexed">
+    <button class="_hidden-post-close">
+        <svg fill="#cfcfcf" height="32" viewBox="0 0 48 48" width="32">
+            <path clip-rule="evenodd" d="M41.1 9.1l-15 15L41 39c.6.6.6 1.5 0 2.1s-1.5.6-2.1 0L24 26.1l-14.9 15c-.6.6-1.5.6-2.1 0-.6-.6-.6-1.5 0-2.1l14.9-15-15-15c-.6-.6-.6-1.5 0-2.1s1.5-.6 2.1 0l15 15 15-15c.6-.6 1.5-.6 2.1 0 .6.6.6 1.6 0 2.2z"></path>
+        </svg>
+    </button>
+    <button class="next-post">
+        <span style="transform: rotate(45deg);
+            position: absolute;
+            top: 0px;
+            left: 60px;">_</span>
+
+        <span style="    position: absolute;
+            transform: rotate(-45deg);
+            top: 0px;
+            left: 20px;">_</span>
+        </button>
+
+    <button class="prev-post">
+        <span style="transform: rotate(45deg);
+            position: absolute;
+            top: 0px;
+            right: 20px;">_</span>
+
+        <span style="    position: absolute;
+            transform: rotate(-45deg);
+            top: 0px;
+            right: 60px;">_</span>
+        </button>
+    </button>
+    <div class="_width-40 ml-20" id="_post">
+
+    </div>
+    <div id="comments">
+
+    </div>
+</div>
+
+
+<script src="/js/profiles/hover.js"></script>
+<!-- <script src="/js/post/interact.js"></script> -->
+<script src="/js/profiles/utils.js"></script>

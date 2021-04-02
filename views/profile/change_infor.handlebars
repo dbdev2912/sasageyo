@@ -1,0 +1,140 @@
+    <div class="form-container">
+        <form class="" action="/profile-change" method="post">
+
+            <div class="form-component">
+                <div class="comp-left">
+                    <img class="form-img" src="{{profile.avatar}}" alt="">
+                </div>
+                <div class="comp-right">
+                    <p class="profile-name">{{profile.name}}</p>
+                    <button class="prevent-default" id="psedo-btn">Thay đổi ảnh đại diện</button>
+                </div>
+            </div>
+            <div class="form-component">
+                <div class="comp-left">
+                    <p>
+                        <span class="title">Tên</span>
+                    </p>
+                </div>
+                <div class="comp-right">
+                    <div class="comp-container input-container">
+                        <input class="input-control" type="text" name="name" value="{{profile.name}}">
+                    </div>
+                    <div class="comp-container descriptions">
+                        <span class="description">Hãy lấy tên mà bạn thường dùng để tài khoản của bạn dễ tìm thấy hơn. Đó có thể là tên đầy đủ, biệt danh hoặc tên doanh nghiệp.</span>
+                        <span class="description">Bạn chỉ có thể đổi tên mình 2 lần trong vòng 14 ngày.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-component">
+                <div class="comp-left">
+                    <p>
+                        <span class="title">Tên người dùng</span>
+                    </p>
+                </div>
+                <div class="comp-right">
+                    <div class="comp-container input-container">
+                        <input class="input-control" type="text" name="token" value="{{profile.user_token}}">
+                    </div>
+                    <div class="comp-container descriptions">
+                        <span class="description">Thông thường, bạn sẽ có thể đổi lại tên người dùng về mynupython sau 14 ngày nữa. <a href="/about/policies" class="more">Tìm hiểu thêm</a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-component">
+                <div class="comp-left">
+                    <p>
+                        <span class="title">Trang web</span>
+                    </p>
+                </div>
+                <div class="comp-right">
+                    <div class="comp-container input-container">
+                        <input class="input-control" type="text" name="website" value="{{profile.website}}">
+                    </div>
+                </div>
+            </div>
+            <div class="form-component">
+                <div class="comp-left">
+                    <p>
+                        <span class="title">Tiểu sử</span>
+                    </p>
+                </div>
+                <div class="comp-right">
+                    <div class="comp-container input-container">
+                        <textarea class="input-control" type="text" name="bio" value="">{{profile.bio}}</textarea>
+                    </div>
+                    <div class="comp-container descriptions">
+                        <strong class="description">Thông tin cá nhân</strong>
+                        <span class="description">Cung cấp thông tin cá nhân của bạn, bất kể bạn dùng tài khoản cho doanh nghiệp, thú cưng hay gì khác. Thông tin này sẽ không hiển thị trên trang cá nhân công khai của bạn.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-component">
+                <div class="comp-left">
+                    <p>
+                        <span class="title">Email</span>
+                    </p>
+                </div>
+                <div class="comp-right">
+                    <div class="comp-container input-container">
+                        <input class="input-control" type="text" name="email" value="{{profile.email}}">
+                    </div>
+                </div>
+            </div>
+            <div class="form-component">
+                <div class="comp-left">
+                    <p>
+                        <span class="title">Số điện thoại</span>
+                    </p>
+                </div>
+                <div class="comp-right">
+                    <div class="comp-container input-container">
+                        <input class="input-control" type="text" name="phone" value="{{profile.phone}}">
+                    </div>
+                    <div class="comp-container description">
+                        <button class="btn btn-primary prevent-default">Xác minh số điện thoại</button>
+                    </div>
+                </div>
+            </div>
+            <div class="form-component">
+                <div class="comp-left">
+                    <p>
+                        <span class="title">Giới tính</span>
+                    </p>
+                </div>
+                <div class="comp-right">
+                    <div class="comp-container input-container">
+                        <input class="input-control" type="text" id="gender-switch" value="{{profile.gender}}">
+                    </div>
+                </div>
+            </div>
+            <div class="form-component">
+                <div class="comp-left">
+                    <p>
+                        <span class="title">Gợi ý tài khoảng tương tự</span>
+                    </p>
+                </div>
+                <div class="comp-right relative">
+                    <div class="comp-container input-container relative-input">
+                        <input type="checkbox" name="" value="">
+                    </div>
+                    <div class="comp-container descriptions relative-description">
+                        <strong class="relative-content">Bao gồm tài khoản của bạn khi đề xuất tài khoản tương tự mà mọi người có thể muốn theo dõi.</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="form-component">
+                <div class="comp-left">
+
+                </div>
+                <div class="comp-right submit-container">
+                    <button type="submit" class="btn btn-primary" name="button">Gửi</button>
+                    <button class="psedo-btn prevent-default">Tạm thời vô hiệu hóa tài khoản</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <form style="display: none" action="/changeIMG" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" id="file" value="">
+    </form>
+    <script src="/js/change/change-infor.js"></script>

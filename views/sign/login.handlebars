@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <meta charset="utf-8">
+        <title>Sasageyo | Đăng nhập</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- <link rel="stylesheet" href="/css/bootstrap.css"> -->
+        <link rel="stylesheet" href="/css/style.css">
+        <script src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="/js/jquery.js"></script>
+    </head>
+    <body>
+        <div class="sign-background">
+            <div class="sign-container">
+                <div class="sign-component">
+                    <img src="/img/logo.jpg" alt="">
+                </div>
+                <div class="sign-component">
+                    <form class="form" action="/login-process" method="post">
+                        <input class="sign-input" type="text" placeholder="Số điện thoại, tên người dùng hoặc email" name="user" value="">
+                        <input class="sign-input" type="password" placeholder="Mật khẩu" name="pass" value="">
+                        <button  type="submit" class="btn btn-primary" name="submit">Đăng nhập</button>
+                    </form>
+                </div>
+                <div class="sign-component divider">
+                    <span>HOẶC</span>
+                    <hr class="hr"/>
+                </div>
+                <div class="sign-component">
+                    <button class="btn fb-login"><i style="font-size:18px; color: blue" class="fa">&#xf230;</i> Đăng nhập bằng Facebook</button>
+                </div>
+                <div class="sign-component">
+                    <p class="invite forgot"><a href="/logup" class="link">Quên mật khẩu?</a></p>
+                </div>
+            </div>
+            <div class="sign-container invitation">
+                <div class="sign-component">
+                    <p class="invite">Bạn không có tài khoảng <a href="/logup" class="link">Đăng ký?</a></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

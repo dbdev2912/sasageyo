@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="/css/home/master.css">
+<div class="container main-container">
+    <div class="width-60">
+        <div class="_post">
+            <div class="_post-header">
+                <div class="head-div owner-img">
+                    <img src="{{profile.avatar}}" alt="">
+                </div>
+                <div class="head-div owner-name">
+                    <span>{{profile.user_token}}</span>
+                </div>
+                <div class="head-div switch">
+                    <span class="switch-notation">...</span>
+                </div>
+            </div>
+            <div class="_post-body">
+                <button class="next">^</button>
+                <button class="prev">^</button>
+                <div class="imgs-container">
+                    <!-- <div class="_post-img" role="head" position="0">
+                        <img class="post-img" src="/img/avatar/minu1.jpg" alt="">
+                    </div> -->
+                    <div class="_post-img" id="add-img-theme">
+                        <div class="post-img">
+                            <div class="add-img-container">
+                                <button class="add-post add-img add-toggle">+</button>
+                                <p class="add-btn-title add-toggle">Thêm ảnh</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="_post-content">
+                <span class="total-like">Nội dung</span>
+                <textarea class="input-control content" name="content" rows="8" cols="80"></textarea>
+                <button class="btn btn-primary" id="post">Đăng</button>
+            </div>
+        </div>
+        <div class="_posts-footer">
+
+        </div>
+    </div>
+    <div class="width-40 fixed">
+        <div class="suggest">
+            <div class="suggest-div">
+                <div class="left">
+                    <span>Chế độ xem</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form class="hidden" id="hidden-form" action="/add-post" method="post" enctype="multipart/form-data">
+</form>
+
+
+<script src="/js/home/main.js"></script>
+<!-- <script src="/js/home/slide.js"></script> -->
+
+
+
+<script src="/js/profiles/post-add.js"></script>

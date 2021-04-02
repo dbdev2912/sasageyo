@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <meta charset="utf-8">
+        <title>Sasageyo | Đăng ký</title>
+        <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- <link rel="stylesheet" href="/css/bootstrap.css"> -->
+        <link rel="stylesheet" href="/css/style.css">
+        <script src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="/js/jquery.js"></script>
+    </head>
+    <body>
+        <div class="sign-background">
+            <div class="sign-container">
+                <div class="sign-component">
+                    <img src="/img/birth1.png" alt="">
+                </div>
+                <div class="sign-component">
+                    <p class="offer">Để tăng trãi nghiệm, chúng tôi cần được bạn cho phép sử dụng ngày sinh của mình.</p>
+                </div>
+
+                <div class="sign-component divider">
+                    <hr class="hr"/>
+                </div>
+
+                <div class="sign-component">
+                    <form class="form" id="form" action="/update-user-birth" method="post">
+                        <div class="horizontal-input-groups">
+                            <div class="group">
+                                <input type="text" placeholder="Ngày" class="sign-input date-input" name="date" value="">
+                            </div>
+                            <div class="group">
+                                <input type="text" placeholder="Tháng" class="sign-input date-input" name="month" value="">
+                            </div>
+                            <div class="group">
+                                <input type="text" placeholder="Năm" class="sign-input date-input" name="year" value="">
+                            </div>
+                            <!-- <input class="sign-input date-chosing" type="date" name="birthdate" value=""> -->
+                        </div>
+                        <button  type="submit" class="btn btn-primary max-width-btn" name="submit">Gửi</button>
+                    </form>
+                </div>
+                <div class="policy">
+                    <small>Bằng cách nhấn Gửi, ngày sinh của bạn sẽ là vĩnh viễn và không thể thay đổi. Hãy cân nhắc thật kĩ nhé!</small>
+                </div>
+            </div>
+            <div class="sign-container invitation">
+                <div class="sign-component">
+                    <p class="invite">Bạn đã có tài khoản <a href="/login" class="link">Đăng nhập</a></p>
+                </div>
+            </div>
+        </div>
+        <script src="/js/sign/dateValidate.js"></script>
+    </body>
+</html>

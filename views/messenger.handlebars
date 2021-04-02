@@ -1,0 +1,118 @@
+<link rel="stylesheet" href="/css/messenger/master.css">
+<div class="container messenger">
+    <div class="messenger-left">
+        <div class="session-credential">
+            <div class="credential-container">
+                <p class="session-credential-token" user_id="{{profile.user_id}}">mynupython</p>
+                <p class="session-caret"><span class="caret" style="margin-top: 3px;"></span></p>
+            </div>
+        </div>
+        <div class="messenger-users">
+            {{#each users}}
+            <div class="messenger-user" token = "{{user_id}}">
+                <div class="messenger-user-img-container">
+                    <img src="{{avatar}}" alt="">
+                </div>
+                <div class="messenger-user-infor-container">
+                    <div>
+                        <span class="messenger-user-token">{{user_token}}</span>
+                    </div>
+                    <div>
+                        <span class="messenger-user-latest">ê đũy =)))</span>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    <div class="messenger-right">
+        <div class="messenger-header">
+            <div class="head-user-img">
+                <img src="/img/avatar/default.jpg" alt="">
+            </div>
+            <div class="head-user-token-container">
+                <span class="head-user-token">mynupython</span>
+            </div>
+        </div>
+        <div class="messages-container">
+            <div class="message-left">
+                <p class="message">Đây là tin nhắn</p>
+            </div>
+            <!-- <div class="message-left">
+                <p class="message">Đây là tin nhắn giả trân vô cùng</p>
+            </div>
+            <div class="message-right">
+                <p class="message">Đây là tin nhắn</p>
+            </div>
+            <div class="message-left">
+                <p class="message">Đây là tin nhắn</p>
+            </div>
+            <div class="message-left">
+                <img src="/img/post1.jpg" alt="">
+            </div>
+            <div class="message-right">
+                <p class="message">Đây là tin nhắn giả trân vô cùng</p>
+            </div> -->
+        </div>
+        <div class="input-bar">
+            <input type="text" id="input" placeholder="Aa." name="" value="">
+            <div class="send-notation">
+                <svg fill="#262626" height="24" viewBox="0 0 48 48" width="24">
+                    <path d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 3.1.3 3.5.1 4S0 5.2.4 5.7l15.9 15.6 5.5 22.6c.1.6.6 1 1.2 1.1h.2c.5 0 1-.3 1.3-.7l23.2-39c.4-.4.4-1 .1-1.5zM5.2 6.1h35.5L18 18.7 5.2 6.1zm18.7 33.6l-4.4-18.4L42.4 8.6 23.9 39.7z"></path>
+                </svg>
+            </div>
+            <div class="files">
+                <svg id="file-chosing" aria-label="Thêm ảnh hoặc video" class="_8-yf5 " fill="#262626" height="24" viewBox="0 0 48 48" width="24">
+                    <path d="M38.5 0h-29C4.3 0 0 4.3 0 9.5v29C0 43.7 4.3 48 9.5 48h29c5.2 0 9.5-4.3 9.5-9.5v-29C48 4.3 43.7 0 38.5 0zM45 38.5c0 3.6-2.9 6.5-6.5 6.5h-29c-3.3 0-6-2.5-6.4-5.6l8.3-8.3c.1-.1.3-.2.4-.2.1 0 .2 0 .4.2l6.3 6.3c1.4 1.4 3.6 1.4 5 0L35.9 25c.2-.2.6-.2.8 0l8.3 8.3v5.2zm0-9.4l-6.2-6.2c-1.3-1.3-3.7-1.3-5 0L21.3 35.3c-.1.1-.3.2-.4.2-.1 0-.2 0-.4-.2L14.2 29c-1.3-1.3-3.7-1.3-5 0L3 35.2V9.5C3 5.9 5.9 3 9.5 3h29C42.1 3 45 5.9 45 9.5v19.6zM11.8 8.2c-1.9 0-3.5 1.6-3.5 3.5s1.6 3.5 3.5 3.5 3.5-1.6 3.5-3.5-1.6-3.5-3.5-3.5z"></path></svg>
+
+                <div class="file-options" drop="close">
+                    <span class="bridge_"></span>
+                    <div class="imgandvideo">
+                        <button class="gear file-btn" id="img-input">
+                            <img class="file-btn-img" src="/img/img.png" alt="">
+                        </button>
+                        <button class="gear file-btn" id="video-input" style="border-left: 1px solid #ccc !important">
+                            <img class="file-btn-img" src="/img/video.png" alt="">
+                        </button>
+                        <button class="gear file-btn" id="other-input">
+                            <img class="file-btn-img" src="/img/file.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="preview-theme" style="display: none">
+    <div class="preview-container">
+        <div class="preview-title">
+            <span>Xem trước</span>
+        </div>
+        <div id="close">
+            <svg fill="#262626" height="24" viewBox="0 0 48 48" width="24">
+                <path clip-rule="evenodd" d="M41.1 9.1l-15 15L41 39c.6.6.6 1.5 0 2.1s-1.5.6-2.1 0L24 26.1l-14.9 15c-.6.6-1.5.6-2.1 0-.6-.6-.6-1.5 0-2.1l14.9-15-15-15c-.6-.6-.6-1.5 0-2.1s1.5-.6 2.1 0l15 15 15-15c.6-.6 1.5-.6 2.1 0 .6.6.6 1.6 0 2.2z"></path>
+            </svg>
+        </div>
+        <div style="padding: 10px;">
+            <div id=preview>
+
+            </div>
+            <div class="btn-group">
+                <button id="send-file">Gửi <svg fill="#fff" height="24" viewBox="0 0 48 48" width="24">
+                    <path d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 3.1.3 3.5.1 4S0 5.2.4 5.7l15.9 15.6 5.5 22.6c.1.6.6 1 1.2 1.1h.2c.5 0 1-.3 1.3-.7l23.2-39c.4-.4.4-1 .1-1.5zM5.2 6.1h35.5L18 18.7 5.2 6.1zm18.7 33.6l-4.4-18.4L42.4 8.6 23.9 39.7z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form id="tmp-form" class="" style="display: none;" action="index.html" method="post">
+    <input type="file" id="img"   name="" value="" accept="image/*">
+    <input type="file" id="video" name="" value="" accept="video/*">
+    <input type="file" id="order" name="" value="">
+</form>
+
+<script src="/js/messenger/utils.js"></script>
+<script src="/js/messenger/resize.js"></script>

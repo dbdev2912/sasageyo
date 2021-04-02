@@ -1,0 +1,418 @@
+/* body::-webkit-scrollbar{
+    z-index: 1000;
+} */
+textarea{
+    height: 100px !important;
+}
+
+.hidden{
+    display: none;
+}
+
+.input-control{
+    width: 100%;
+    border: 1px #ccc solid;
+    outline: none;
+    border-radius: 5px;
+    margin-right: 25px;
+    height: 35px;
+    font-size: 16px;
+    padding: 10px;
+    /* margin-right: 15px; */
+}
+
+.input-control:focus{
+    border: 1px #ccc solid;
+}
+
+.btn{
+    background: #ffff;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    margin-right: 25px;
+    margin-top: 5px;
+    height: 32px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-primary{
+    background: #40d9ed;
+    color: white;
+}
+
+.add-img-container{
+    margin: auto;
+    width: 100px;
+    height: 10%;
+    margin-top: 40%;
+}
+
+.add-img{
+    display: block !important;
+}
+
+
+
+.main-container{
+    position: relative;
+    height: 100%;
+    padding-top: 100px;
+}
+
+.width-60{
+    width: 60%;
+    /* z-index: 68; */
+}
+
+.fixed{
+    padding-top: 150px;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    right: 15px;
+}
+
+.width-40{
+    width: 40%;
+    border: 1px #ccc solid;
+}
+
+
+.suggest{
+    width: 80%;
+    margin: auto;
+}
+
+.self{
+    width: 100%;
+    display: flex;
+}
+
+.self-img{
+    width: 50px;
+    height: 50px;
+}
+
+.self-img img{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.self-name{
+    width: calc((100%-50)/2);
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.psedou-btn-container{
+    width: calc((50%-75));
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+.psedou-btn{
+    background: transparent;
+    color: #1188ff;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+}
+
+.suggest-div{
+    margin-top: 15px;
+    display: flex;
+}
+
+.left{
+    width: 50%;
+    text-align: left;
+}
+
+.right{
+    width: 50%;
+    text-align: left;
+}
+
+.left span{
+    font-size: 16px;
+    color: #aaa;
+    font-weight: bold;
+}
+
+
+.right span{
+    font-size: 16px;
+    color: #777;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.user{
+    display: flex;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.user p{
+    font-size: 14px;
+    color: #ccc;
+    margin: 0 !important;
+    line-height: 1;
+    /* margin-left: 5px !important; */
+}
+.user-img{
+    margin-top: 10px;
+    width: 50px;
+    /* border: 1px solid #ccc; */
+}
+
+.user-img img{
+    width: 60%;
+    border-radius: 50%;
+    margin-top: 20%;
+    margin-left: 20%;
+}
+
+.user-name{
+    width: calc((100%-50)/2);
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+
+
+
+/*
+    POST
+*/
+
+._post{
+    width: 90%;
+    margin: auto;
+    margin-top: 25px;
+    min-height: 500px;
+    background: #fff;
+    position: relative;
+    border: 1px #ccc solid;
+}
+
+._post-header{
+    height: 50px;
+    border-bottom: 1px #ccc solid;
+    display: flex;
+}
+
+._posts-footer{
+    height: 300px;
+}
+
+.head-div{
+    width: fit-content; width: -moz-max-content;
+}
+
+.head-div span{
+    font-size: 16px;
+    color: #777;
+    font-weight: bold;
+}
+
+.switch-notation{
+    font-size: 24px !important;
+}
+
+.owner-img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    position: relative;
+    border: 2px pink solid;
+}
+
+.owner-img img{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    clip-path: circle();
+    left: 5px;
+    top: 5px;
+}
+
+.owner-name{
+    margin-right: auto;
+    padding: 15px;
+}
+
+.switch{
+    margin-left: auto;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+._post-body{
+    min-height: 250px;
+    margin-bottom: 15px;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.next, .prev, .next-post, .prev-post{
+    position: absolute;
+    width: 10%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    border: none;
+    outline: none;
+    top: 0;
+    z-index: 68;
+    color: white;
+    font-size: 36px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.next{
+    right: 10px;
+    top: 40%;
+    transform: rotate(90deg);
+}
+
+.prev{
+    left: 10px;
+    top: 40%;
+    transform: rotate(-90deg);
+}
+
+
+.next-post{
+    display: block;
+    right: 10px;
+    top: 40%;
+    width: 90px !important;
+    height: 50px;
+    transform: rotate(90deg);
+    background: transparent;
+}
+
+.prev-post{
+    display: block;
+    left: 10px;
+    top: 40%;
+    width: 90px !important;
+    height: 50px;
+    transform: rotate(-90deg);
+    background: transparent;
+}
+
+.imgs-container{
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+._post-img{
+    width: 100%;
+    position: relative;
+}
+
+._post-close{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.post-img{
+    width: 100%;
+}
+
+._post-utils{
+    display: flex;
+}
+
+.util{
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.saved{
+    margin-left: auto;
+    margin-right: 15px;
+}
+
+._post-content{
+    padding: 15px;
+}
+
+.total-like, .total-cmts{
+    font-size: 12px;
+    font-weight: bold;
+    color: #404040;
+}
+
+.total-cmts{
+    color: #989898;
+    cursor: pointer;
+}
+
+.content{
+    font-size: 12px;
+    color: #555;
+}
+
+.owner-ident{
+    font-weight: bold;
+    color: #404040;
+    cursor: pointer;
+}
+
+.owner-ident:hover{
+    text-decoration: underline;
+    text-decoration-color: #404040;
+}
+
+._post-comments{
+    height: 100px;
+    overflow-y: scroll;
+    padding: 15px;
+}
+
+._post-comments::-webkit-scrollbar{
+    background: white;
+}
+
+.make-comment{
+    height: 35px;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.make-comment button{
+    position: absolute;
+    height: 100%;
+    font-size: 14px;
+    right: 0;
+    top: 0;
+    width: 20%;
+}
+.make-comment input{
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 20%;
+    border: none;
+    border-top: 1px #ccc solid;
+    outline: none !important;
+}

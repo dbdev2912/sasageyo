@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <meta charset="utf-8">
+        <title>Sasageyo | Đăng ký</title>
+        <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- <link rel="stylesheet" href="/css/bootstrap.css"> -->
+        <link rel="stylesheet" href="/css/style.css">
+        <script src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="/js/jquery.js"></script>
+    </head>
+    <body>
+        <div class="sign-background">
+            <div class="sign-container">
+                <div class="sign-component">
+                    <img src="/img/logo.jpg" alt="">
+                </div>
+                <div class="sign-component">
+                    <p class="offer">Đăng ký để xem ảnh và video từ bạn bè.</p>
+                </div>
+                <div class="sign-component">
+                    <button class="btn btn-primary dark-primary"><i style="font-size:18px; color: white" class="fa">&#xf230;</i> Đăng nhập bằng Facebook</button>
+                </div>
+
+                <div class="sign-component divider">
+                    <span>HOẶC</span>
+                    <hr class="hr"/>
+                </div>
+
+                <div class="sign-component">
+                    <form class="form" action="/logup-process" method="post">
+                        <div class="sign-input-container">
+                            <input class="sign-input" type="text"      id="user" placeholder="Số điện thoại hoặc email" name="user" value="" required>
+                            <!-- <div class="tick-container">
+                                <span class="tick-left"></span>
+                                <span class="tick-right"></span>
+                            </div> -->
+                            <!-- <div class="tick-container">
+                                <span class="err-left"></span>
+                                <span class="err-right"></span>
+                            </div> -->
+                        </div>
+                        <div class="sign-input-container">
+                            <input class="sign-input" type="text"      id="name" placeholder="Tên đầy đủ" name="name" value="" required>
+                        </div>
+                        <div class="sign-input-container">
+                            <input class="sign-input" type="text"      id="token" placeholder="Tên người dùng" name="token" value="" required>
+                        </div>
+                        <div class="sign-input-container">
+                            <input class="sign-input" type="password"  id="pass" placeholder="Mật khẩu" name="pass" value="" required>
+                        </div>
+                        <button  type="submit" class="btn btn-primary" id="submit" name="submit">Đăng ký</button>
+                    </form>
+                </div>
+                <div class="policy">
+                    <small>Bằng cách đăng ký, bạn đồng ý với Điều khoản, Chính sách dữ liệu và Chính sách cookie của chúng tôi.</small>
+                </div>
+            </div>
+            <div class="sign-container invitation">
+                <div class="sign-component">
+                    <p class="invite">Bạn đã có tài khoản <a href="/login" class="link">Đăng nhập</a></p>
+                </div>
+            </div>
+        </div>
+        <script src="/js/sign/credential-validate.js"></script>
+    </body>
+</html>

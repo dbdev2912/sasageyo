@@ -1,0 +1,33 @@
+.comments-container{
+    position: relative;
+    margin-top: 25px;
+    padding-top: 0;
+    width: 40%;
+    border-left: none;
+}
+
+.main-container{
+    width: 70%;
+    min-width: 525px;
+}
+
+.main-container *{
+    box-sizing: border-box;
+}
+
+._post{
+    min-height: unset !important;
+    width: unset;
+}
+.main-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.saperate{
+    height: 80%;
+}
+
+.make-comment{
+
+}
